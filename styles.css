@@ -1,0 +1,119 @@
+:root {
+    --cream-1: hsl(27, 66%, 92%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream-1);
+}
+
+#container {
+    max-width: 400px;
+}
+
+#header {
+    background-color: var(--Soft-red);
+    border-radius: 5px;
+}
+
+#content {
+    background-color: rgb(252, 249, 240);
+    border-radius: 5px;
+}
+
+p {
+    margin: 0;
+}
+
+#balance {
+    font-size: 0.75rem;
+}
+
+h5 {
+    color: var(--Dark-brown);
+}
+
+#price {
+    font-weight: 400;
+}
+
+h5 {
+    font-weight: 700;
+}
+
+#bar {
+    max-height: 160px;
+    width: 40px;
+    background-color: var(--Soft-red);
+    content: '.';
+    transition: background-color 0.5s;
+}
+
+#bar:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#bar-row,
+#name-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#bar p {
+    margin: 150px 0px -1px -1px;
+    color: var(--Medium-brown);
+}
+
+.days {
+    font-size: 0.75rem;
+}
+
+hr {
+    margin-top: 25px;
+    border: 0.5px solid var(--Medium-brown);
+}
+
+#month {
+    color: var(--Medium-brown);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+#monthly-sum {
+    color: var(--Dark-brown);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#from-last {
+    font-size: 00.75rem;
+    color: var(--Medium-brown);
+}
+
+#pct {
+    font-size: 00.75rem;
+    color: var(--Dark-brown);
+    font-weight: 700;
+}
+
+.days {
+    display: none;
+}
