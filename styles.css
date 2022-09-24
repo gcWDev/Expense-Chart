@@ -28,7 +28,7 @@ body {
 }
 
 #header {
-    background-color: var(--Soft-red);
+    background-color: rgba(236, 119, 95);
     border-radius: 5px;
 }
 
@@ -60,15 +60,18 @@ h5 {
 #bar {
     max-height: 160px;
     width: 40px;
-    background-color: var(--Soft-red);
-    content: '.';
+    background-color: rgba(236, 119, 95);
     transition: background-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #bar:hover {
-    opacity: 0.5;
-    transition: opacity 0.5s;
+    background-color: rgba(236, 119, 95, 0.5);
+    cursor: pointer;
 }
+
 
 #bar-row,
 #name-row {
@@ -77,13 +80,12 @@ h5 {
     justify-content: space-between;
 }
 
-#bar p {
-    margin: 150px 0px -1px -1px;
-    color: var(--Medium-brown);
-}
-
 .days {
     font-size: 0.75rem;
+    margin: 0px 0px -20px 0px;
+    color: var(--Medium-brown);
+    position: absolute;
+    bottom: 36%;
 }
 
 hr {
@@ -114,6 +116,13 @@ hr {
     font-weight: 700;
 }
 
-.days {
-    display: none;
+.dollar-amount {
+    background-color: var(--Dark-brown);
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    height: fit-content;
+    margin-top: -30px;
 }
