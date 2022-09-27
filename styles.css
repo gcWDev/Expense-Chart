@@ -1,128 +1,169 @@
 :root {
-    --cream-1: hsl(27, 66%, 92%);
+    /* Primary */
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    /*Neutral */
     --Dark-brown: hsl(25, 47%, 15%);
     --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
     --Very-pale-orange: hsl(33, 100%, 98%);
-    --Soft-red: hsl(10, 79%, 65%);
-    --Cyan: hsl(186, 34%, 60%);
-
 }
 
 * {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 body {
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+.container {
     display: flex;
     flex-direction: column;
+}
+
+.heading-container {
+    background-color: var(--soft-red);
+    width: 50vw;
+    border-radius: 7px;
+    padding: 2vw 2vw;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background-color: var(--cream-1);
+    color: white;
 }
 
-#container {
-    max-width: 400px;
+.balance-amount {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
 }
 
-#header {
-    background-color: rgba(236, 119, 95);
-    border-radius: 5px;
-}
-
-#content {
-    background-color: rgb(252, 249, 240);
-    border-radius: 5px;
-}
-
-p {
-    margin: 0;
-}
-
-#balance {
-    font-size: 0.75rem;
-}
-
-h5 {
-    color: var(--Dark-brown);
-}
-
-#price {
-    font-weight: 400;
-}
-
-h5 {
-    font-weight: 700;
-}
-
-#bar {
-    max-height: 160px;
-    width: 40px;
-    background-color: rgba(236, 119, 95);
-    transition: background-color 0.5s;
+.icon-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-end;
 }
 
-#bar:hover {
-    background-color: rgba(236, 119, 95, 0.5);
-    cursor: pointer;
+svg {
+    width: 65%;
 }
 
+.balance {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 100;
+    margin-bottom: 8px;
+}
 
-#bar-row,
-#name-row {
+.chart-container {
+    background-color: var(--Very-pale-orange);
+    margin-top: 2vh;
+    border-radius: 5px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+}
+
+.inner-container {
+    padding: 3.5vw;
+}
+
+.chart-heading {
+    padding-bottom: 2vh;
+}
+
+.figure-container {
+    display: flex;
     justify-content: space-between;
 }
 
-.days {
-    font-size: 0.75rem;
-    margin: 0px 0px -20px 0px;
-    color: var(--Medium-brown);
-    position: absolute;
-    bottom: 36%;
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.daily-spend {
+    width: 5.5vw;
+    padding: 2px;
+    background-color: var(--Dark-brown);
+    border-radius: 3px;
+    margin-bottom: 1vh;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    /*display: none;*/
+}
+
+.bar {
+    background-color: var(--soft-red);
+    border-radius: 4px;
+    width: 4.7vw;
+    height: 140px;
+    transition: opacity 0.5s;
+}
+
+.bar:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.date {
+    padding: 1vh 0px;
+    font-size: 0.7rem;
+    color: var(--Medium-brown)
 }
 
 hr {
-    margin-top: 25px;
-    border: 0.5px solid var(--Medium-brown);
+    border: none;
+    height: 1px;
+    background-color: rgba(147, 134, 123, 0.3);
+    margin: 2.5vh 0;
 }
 
-#month {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.monthly-subheading {
     color: var(--Medium-brown);
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
 }
 
-#monthly-sum {
+.monthly-balance {
     color: var(--Dark-brown);
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-#from-last {
-    font-size: 00.75rem;
-    color: var(--Medium-brown);
-}
-
-#pct {
-    font-size: 00.75rem;
-    color: var(--Dark-brown);
+    font-size: 30px;
+    padding-top: 0.5vh;
     font-weight: 700;
 }
 
-.dollar-amount {
-    background-color: var(--Dark-brown);
-    color: white;
-    text-align: center;
-    font-size: 10px;
-    padding: 5px 8px;
-    border-radius: 5px;
-    height: fit-content;
-    margin-top: -30px;
+.box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.monthly-pct {
+    font-size: 12.5px;
+    color: var(--Dark-brown);
+    font-weight: 700;
 }
